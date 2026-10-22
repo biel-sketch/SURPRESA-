@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Para a Maria Clara</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--rosa:#e75480;--rosa-claro:#fde8ef;--texto:#3a2a30;--suave:#8a6b75}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Poppins',sans-serif;background:#fff7fa;color:var(--texto);line-height:1.7}
+  #intro{position:fixed;inset:0;background:var(--rosa-claro);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:10;cursor:pointer;transition:opacity .8s}
+  #intro.sumir{opacity:0;pointer-events:none}
+  .envelope{font-size:90px;animation:pulsar 1.6s infinite}
+  @keyframes pulsar{50%{transform:scale(1.08)}}
+  #intro h1{font-family:'Playfair Display',serif;font-weight:500;font-size:26px;margin-top:16px;text-align:center;padding:0 20px}
+  #intro p{color:var(--suave);font-size:14px;margin-top:6px}
+  main{max-width:520px;margin:0 auto;padding:40px 20px 60px}
+  .titulo{font-family:'Playfair Display',serif;font-size:34px;text-align:center;color:var(--rosa);font-weight:500}
+  .sub{text-align:center;color:var(--suave);font-size:14px;margin-bottom:32px}
+  .rotulo{font-size:13px;color:var(--suave);margin:20px 0 8px;text-align:center}
+  .contador{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .caixa{background:#fff;border-radius:14px;padding:12px 4px;text-align:center;box-shadow:0 2px 10px rgba(231,84,128,.08)}
+  .num{font-size:26px;font-weight:500;color:var(--rosa)}
+  .lab{font-size:11px;color:var(--suave)}
+  .musica{margin:36px 0}
+  .musica iframe{width:100%;border:0;border-radius:14px}
+  .btn-spotify{display:block;text-align:center;background:#1db954;color:#fff;text-decoration:none;padding:12px;border-radius:30px;font-weight:500}
+  .curiosidades{background:#fff;border-radius:16px;padding:8px 18px;margin:28px 0}
+  .linha{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--rosa-claro);font-size:14px}
+  .linha:last-child{border:0}
+  .linha span:first-child{color:var(--suave)}
+  .linha span:last-child{font-weight:500;text-align:right}
+  .carta{background:#fff;border-radius:18px;padding:26px 22px;font-family:'Playfair Display',serif;font-size:17px;margin:36px 0;box-shadow:0 2px 14px rgba(231,84,128,.1)}
+  .carta p{margin-bottom:14px}
+  .carta .assinatura{color:var(--rosa);font-style:italic;font-size:20px;margin:0}
+  h2{font-family:'Playfair Display',serif;font-weight:500;text-align:center;font-size:24px;margin:44px 0 20px}
+  .foto{background:#fff;border-radius:16px;overflow:hidden;margin-bottom:22px;box-shadow:0 2px 14px rgba(231,84,128,.1);opacity:0;transform:translateY(30px);transition:all .7s}
+  .foto.visivel{opacity:1;transform:none}
+  .foto img{width:100%;display:block}
+  .foto p{padding:14px 18px;font-size:15px}
+  .falta{padding:60px 20px;text-align:center;color:var(--suave);background:var(--rosa-claro);font-size:13px}
+  footer{text-align:center;color:var(--suave);font-size:14px;margin-top:40px}
+  .coracao{position:fixed;bottom:-30px;font-size:20px;animation:subir linear forwards;pointer-events:none;z-index:1}
+  @keyframes subir{to{transform:translateY(-110vh);opacity:0}}
+</style>
+</head>
+<body>
+
+<div id="intro">
+  <div class="envelope">💌</div>
+  <h1>Maria Clara, você recebeu uma surpresa</h1>
+  <p>toque para abrir</p>
+</div>
+
+<main>
+  <div class="titulo">Para a Maria Clara</div>
+  <div class="sub">um site inteiro só pra você, porque um bilhete seria pouco</div>
+
+  <div class="rotulo">Juntos desde 28/01/2026</div>
+  <div class="contador" id="c1"></div>
+  <div class="contador" id="c1b" style="margin-top:8px"></div>
+
+  <div class="rotulo">Namorando oficialmente desde 15/05/2026</div>
+  <div class="contador" id="c2"></div>
+
+  <div class="musica" id="musica"></div>
+
+  <div class="curiosidades">
+    <div class="linha"><span>Motivos pra desistir</span><span>milhares</span></div>
+    <div class="linha"><span>Vezes que desistimos</span><span>zero</span></div>
+    <div class="linha"><span>Vezes que você me perdoou</span><span>mais do que eu mereço</span></div>
+    <div class="linha"><span>Piadas feitas só pra te ver sorrir</span><span>todas</span></div>
+  </div>
+
+  <div class="carta">
+    <p>Maria Clara,</p>
+    <p>Desde o primeiro dia, a gente decidiu que queria ficar junto. E olha, o universo bem que tentou atrapalhar. Motivo pra desistir? Teve. Milhares. Mas a gente sempre escolheu o mesmo caminho: um ao outro.</p>
+    <p>Você já sabe que eu não consigo passar cinco minutos sem fazer uma piada. O que talvez você não saiba é o motivo: é tudo desculpa pra ver você sorrir. Seu sorriso é a minha coisa favorita no mundo, e eu vou passar o resto da vida inventando piada ruim só pra continuar vendo ele.</p>
+    <p>Eu sei que nem sempre acertei. Errei, falhei, e mesmo assim você sempre me perdoou. Você é o coração e a cabeça da gente: a parte que sente, a parte que pensa e, sejamos sinceros, a parte que salva o dia quando eu faço besteira.</p>
+    <p>Então fica registrado aqui, num site inteiro, porque um bilhete seria pouco: eu quero passar a vida toda com você. Esse contador lá em cima nunca vai parar. E eu também não.</p>
+    <p class="assinatura">Te amo.</p>
+  </div>
+
+  <h2>A nossa história</h2>
+  <div id="fotos"></div>
+
+  <footer>feito com muito amor (e algumas piadas ruins) ❤️</footer>
+</main>
+
+<script>
+  // Cole aqui o ID da música no Spotify (veja instruções abaixo). Se deixar vazio, aparece um botão para abrir a música.
+  const SPOTIFY_TRACK_ID = "";
+
+  const fotos = [
+    ["foto1.png", "Primeiro registro oficial do meu lugar favorito: do seu lado."],
+    ["foto2.png", "Combinando roupa e combinando a vida."],
+    ["foto3.png", "Prova documentada de que minhas piadas funcionam (às vezes)."],
+    ["foto4.png", "Esse sorriso é o motivo de tudo. Pra sempre."],
+    ["foto5.png", "Rolê sem destino, mas com a melhor companhia."],
+    ["foto6.png", "Colorindo tudo, inclusive a minha vida."],
+  ];
+
+  const musica = document.getElementById("musica");
+  musica.innerHTML = SPOTIFY_TRACK_ID
+    ? `<iframe src="https://open.spotify.com/embed/track/${SPOTIFY_TRACK_ID}" height="152" allow="encrypted-media"></iframe>`
+    : `<a class="btn-spotify" href="https://open.spotify.com/search/Cantada%20Luan%20Santana" target="_blank">▶ Ouvir a nossa música: Cantada, Luan Santana</a>`;
+
+  const area = document.getElementById("fotos");
+  fotos.forEach(([arq, leg]) => {
+    const d = document.createElement("div");
+    d.className = "foto";
+    d.innerHTML = `<img src="${arq}" alt="${leg}" onerror="this.outerHTML='<div class=falta>coloque ${arq} na mesma pasta</div>'"><p>${leg}</p>`;
+    area.appendChild(d);
+  });
+  const obs = new IntersectionObserver(es => es.forEach(e => e.isIntersecting && e.target.classList.add("visivel")), {threshold:.2});
+  document.querySelectorAll(".foto").forEach(f => obs.observe(f));
+
+  function diff(ini){
+    const n = new Date();
+    let m = (n.getFullYear()-ini.getFullYear())*12 + n.getMonth()-ini.getMonth(), d = n.getDate()-ini.getDate();
+    if (d < 0){ m--; d += new Date(n.getFullYear(), n.getMonth(), 0).getDate(); }
+    return {m, d, h:n.getHours(), mi:n.getMinutes(), s:n.getSeconds(), total:Math.floor((n-ini)/86400000)};
+  }
+  const cx = (v,l) => `<div class="caixa"><div class="num">${String(v).padStart(2,"0")}</div><div class="lab">${l}</div></div>`;
+  function tick(){
+    const a = diff(new Date(2026,0,28)), b = diff(new Date(2026,4,15));
+    c1.innerHTML = cx(a.m,"meses")+cx(a.d,"dias")+cx(a.h,"horas");
+    c1b.innerHTML = cx(a.mi,"minutos")+cx(a.s,"segundos")+cx(a.total,"dias no total");
+    c2.innerHTML = cx(b.m,"meses")+cx(b.d,"dias")+cx(b.total,"dias no total");
+  }
+  tick(); setInterval(tick, 1000);
+
+  document.getElementById("intro").onclick = function(){
+    this.classList.add("sumir");
+    setInterval(() => {
+      const c = document.createElement("div");
+      c.className = "coracao"; c.textContent = "❤️";
+      c.style.left = Math.random()*100 + "vw";
+      c.style.animationDuration = 5 + Math.random()*4 + "s";
+      document.body.appendChild(c);
+      setTimeout(() => c.remove(), 9000);
+    }, 900);
+  };
+</script>
+</body>
+</html>
